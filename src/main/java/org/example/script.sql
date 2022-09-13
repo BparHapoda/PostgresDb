@@ -12,7 +12,7 @@ CHECK (premium >= '0'),
 	CHECK (salary > '0')
 );
 
-	CREATE TABLE faculties (
+	CREATE TABLE faculties    (
     id serial NOT NULL PRIMARY KEY,
     name varchar(100) NOT NULL ,
     	UNIQUE (name),
