@@ -78,8 +78,7 @@ INSERT INTO departmens VALUES (11,'German laungauge','100');
 
             ALTER TABLE faculties ADD COLUMN dean  text NOT NULL DEFAULT 'Виктор Ивунин';
 
-SELECT * FROM departmens ORDER BY name ASC; //Вывести таблицу кафедр, но расположить ее поля в обратном порядке.
-SELECT (name || ' group')AS Название_группы,rating AS рейтинг FROM groups; //Вывести названия групп и их рейтинги с уточнением имен полей именем таблицы
+
 ALTER TABLE teachers ADD COLUMN isAssistant  boolean NOT NULL DEFAULT false;
 ALTER TABLE teachers ADD COLUMN isProfessor  boolean NOT NULL DEFAULT false;
 ALTER TABLE teachers ADD COLUMN position varchar (30) NOT NULL DEFAULT ' ';
@@ -102,7 +101,11 @@ UPDATE teachers SET salary=rate+premium WHERE id =5;
 UPDATE teachers SET salary=rate+premium WHERE id =6;
 UPDATE teachers SET salary=rate+premium WHERE id =7;
 
+SELECT * FROM departmens ORDER BY name ASC;
+--Вывести таблицу кафедр, но расположить ее поля в обратном порядке.
 
+SELECT (name || ' group')AS Название_группы,rating AS рейтинг FROM groups;
+--Вывести названия групп и их рейтинги с уточнением имен полей именем таблицы
 
 SELECT surname,((rate/premium)*100) AS Отношение_cтавки_к_надбавке FROM teachers;
 --процент ставки по отношению к надбавке
